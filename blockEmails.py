@@ -14,7 +14,6 @@ def block_email(data,blockEmail,blockedCsvPath):
         
         # Save the blocked email to a new or existing CSV file
         with open(blockedCsvPath, 'a') as f:
-            # Write header only if the file doesn't exist
             if not file_exists:
                 f.write("Blocked Email\n")
             for email in blocked_emails:
